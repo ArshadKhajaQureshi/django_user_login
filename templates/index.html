@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <a href="/">Home</a>
+    {% if user.is_authenticated %}
+    <div>Hello, {{user.first_name}}</div>
+    <a href="register/logout">logout</a>
+    {% else %}
+
+<!--    here the 1st register is our app name  and the 2nd is the calling of url "register"-->
+    <a href="register/register">Register</a>
+    <a href="register/login">login</a>
+    {% endif %}
+
+
+    <div> This is the name taken from models   </div>
+    <div> this is integer taken from models  </div>
+    <div> This is description taken from models  </div>
+    <div> This is price taken from models </div>
+</body>
+</html>
